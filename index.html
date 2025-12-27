@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save the Date | Robel & Diana</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#f2e9e4;
+  display:flex;
+  justify-content:center;
+  padding:30px 0;
+}
+
+/* Phone frame */
+.phone{
+  width:320px;
+  background:#fff;
+  border-radius:40px;
+  padding:14px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* Screen */
+.screen{
+  background:#f9f6f4;
+  border-radius:26px;
+  padding:20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Header */
+.header{
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+/* Envelope */
+.envelope{
+  width:200px;
+  height:140px;
+  margin:20px auto;
+  background:#c9a27e;
+  position:relative;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.envelope:before{
+  content:"";
+  position:absolute;
+  top:0;
+  width:100%;
+  height:70%;
+  background:#d6b18c;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+}
+
+/* Card */
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  margin-top:20px;
+  display:none;
+  animation:fadeUp 0.8s ease forwards;
+}
+
+.card h1{
+  font-family:'Playfair Display',serif;
+  color:#7b1e2b;
+  font-size:20px;
+}
+
+.card h2{
+  font-family:'Playfair Display',serif;
+  margin:10px 0;
+}
+
+.card p{
+  font-size:13px;
+  line-height:1.6;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Buttons */
+.rsvp{
+  margin-top:15px;
+}
+.rsvp a{
+  display:inline-block;
+  padding:10px 18px;
+  background:#7b1e2b;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:12px;
+}
+
+/* Icons */
+.icons{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+  font-size:11px;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music">
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5b8c4c2d08.mp3" type="audio/mpeg">
+</audio>
+
+<div class="phone">
+  <div class="screen">
+
+    <div class="header">SAVE THE DATE</div>
+
+    <div class="envelope" onclick="openInvite()"></div>
+
+    <div id="card" class="card">
+      <h1>Save the Date</h1>
+      <p>With joyful hearts</p>
+
+      <h2>Robel & Diana</h2>
+
+      <p>
+        Sunday<br>
+        <strong>19 July 2026</strong><br>
+        Kampala, Uganda
+      </p>
+
+      <p style="font-size:11px; letter-spacing:1px;">
+        FORMAL INVITATION TO FOLLOW
+      </p>
+
+      <div class="rsvp">
+        <a href="https://wa.me/250783103188" target="_blank">
+          RSVP VIA WHATSAPP
+        </a>
+      </div>
+    </div>
+
+    <div class="icons">
+      <span>▶ Video</span>
+      <span>🎵 Music</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openInvite(){
+  document.getElementById("card").style.display="block";
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
